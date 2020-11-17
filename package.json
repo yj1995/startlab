@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "build": "webpack",
     "deploy": "npm run build && gh-pages -d dist",
-    "heroku-postbuild": "npm install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "proxy": "http://127.0.0.1:3000",
   "keywords": [
@@ -24,9 +24,7 @@
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "webpack-hot-middleware": "^2.25.0",
-    "webpack-node-externals": "^1.7.2"
-  },
-  "devDependencies": {
+    "webpack-node-externals": "^1.7.2",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
