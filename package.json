@@ -6,7 +6,6 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "deploy": "npm run build && gh-pages -d dist",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "proxy": "http://127.0.0.1:3000",
