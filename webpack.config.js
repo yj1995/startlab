@@ -7,9 +7,15 @@ module.exports = {
     bundle: "./src/index.js"
   },
   output: {
-    filename: "[name].js",
     path: path.resolve(__dirname, 'dist'),
+    filename: "[name].js",
+    chunkFilename: '[name].js',
     publicPath: '/'
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
